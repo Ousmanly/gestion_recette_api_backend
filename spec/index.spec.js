@@ -53,10 +53,10 @@ describe('Recipe tests', () => {
 
   it('Can update recipes', async () => {
     const recipe = {
-      id: 5,
-      title: 'crenpe',
-      type: 'dessert',
+      id: 1,
+      title: 'crenpeTest',
       ingredient: 'farime',
+      type: 'dessert',
     };
     await RecipeModel.updateRecipes(
       recipe.id,

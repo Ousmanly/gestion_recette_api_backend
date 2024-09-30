@@ -15,13 +15,13 @@ Suivez ces étapes pour configurer le projet sur votre machine locale :
 1. **Clonez le repository :**
 
    ```bash
-       https://github.com/Ousmanly/gestion_recette_api.git
+       https://github.com/Ousmanly/gestion_recette_api_backend.git
    ```
 
 2. **Accédez au dossier du projet :**
 
    ```bash
-      cd gestion_recette_api
+      cd gestion_recette_api_backend
    ```
 
 3. **Installez les dépendances :**
@@ -132,7 +132,7 @@ Pour démarrer l'application, exécutez la commande suivante :
 
 #### Exécuter les tests
 
-- Assurez-vous que votre base de données est en cours d'exécution et que les tables nécessaires sont configurées.
+- Assurez-vous que votre base de données est en cours d'exécution et que les tables nécessaires sont configurées, vous pouvez importer le ficher gestion_recipes.sql qui se trouve à la racine de projet.
 - Ensuite, lancez les tests avec la commande suivante :
 
 ```bash
@@ -169,5 +169,4 @@ docker-compose up
 ## Author
 
 - **GitHub** : [Ousmane Ly](https://github.com/Ousmanly)
-- **GitHub** : [Mariem Dianifaba](https://github.com/mariem2012)
 - **GitHub** : [Sem Thillo](https://github.com/semthillo)
