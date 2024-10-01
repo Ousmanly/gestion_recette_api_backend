@@ -24,8 +24,8 @@ DROP TABLE IF EXISTS `recipes`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `recipes` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(50) NOT NULL,
-  `ingredient` text NOT NULL,
+  `title` varchar(100) NOT NULL UNIQUE,
+  `ingredients` text NOT NULL,
   `type` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -37,7 +37,7 @@ CREATE TABLE `recipes` (
 
 LOCK TABLES `recipes` WRITE;
 /*!40000 ALTER TABLE `recipes` DISABLE KEYS */;
-INSERT INTO `recipes` VALUES (1,'crenpeTest','farime','dessert'),(2,'Chicken Curry','Chicken, Curry powder, Coconut milk, Onion, Garlic, Ginger','Indian'),(3,'Chocolate Cake','Flour, Sugar, Cocoa powder, Eggs, Butter, Baking powder','Dessert'),(7,'Pasta Carbonaran','Pasta, Bacon, Egg, Parmesan, Black pepper','plat'),(9,'crepe','dessert','farime'),(10,'crepe','dessert','farime'),(11,'crepe','dessert','farime'),(12,'crepe','dessert','farime'),(13,'crepe','dessert','farime'),(14,'crepe','dessert','farime'),(15,'crepe','dessert','farime'),(16,'crepe','dessert','farime'),(17,'crepe','dessert','farime'),(18,'crepe','dessert','farime'),(19,'crepe','dessert','farime'),(20,'crepe','dessert','farime'),(22,'crepe','dessert','farime');
+INSERT INTO `recipes` VALUES (1,'crenpe','farime, Oeuf','desert'),(2,'Chicken Curry','Chicken, Curry powder, Coconut milk, Onion, Garlic, Ginger','plat'),(3,'Chocolate Cake','Flour, Sugar, Cocoa powder, Eggs, Butter, Baking powder','desert'),(7,'Pasta Carbonaran','Pasta, Bacon, Egg, Parmesan, Black pepper','plat');
 /*!40000 ALTER TABLE `recipes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

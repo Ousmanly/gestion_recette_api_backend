@@ -12,8 +12,11 @@ const addRequestValidatore = [
     .isString()
     .withMessage("Title can't be number!")
     .bail()
-    .isLength({ min: 6 })
-    .withMessage('Title must be at least 6 characters long!')
+    .isLength({ min: 5 })
+    .withMessage('Title must be at least 5 characters long!')
+    .bail()
+    .isLength({ max: 100 })
+    .withMessage('Title cannot be more than 100 characters long!')
     .bail()
     .custom(async (value) => {
       const result = await RecipeModel.checkRecipes(value);
@@ -22,13 +25,16 @@ const addRequestValidatore = [
       }
       return true;
     }),
-  check('ingredient')
+  check('ingredients')
     .not()
     .isEmpty()
     .withMessage('Ingredient is required!')
     .bail()
-    .isLength({ min: 6 })
-    .withMessage('Ingredient must be at least 6 characters long!')
+    .isLength({ min: 10 })
+    .withMessage('Ingredient must be at least 10 characters long!')
+    .bail()
+    .isLength({ max: 500 })
+    .withMessage('Ingredient cannot be more than 500 characters long!')
     .bail()
     .isString()
     .withMessage("Ingredient can't be number!")
@@ -86,8 +92,11 @@ const updateRequestValidatore = [
     .isString()
     .withMessage("Title can't be number!")
     .bail()
-    .isLength({ min: 6 })
-    .withMessage('Title must be at least 6 characters long!')
+    .isLength({ min: 5 })
+    .withMessage('Title must be at least 5 characters long!')
+    .bail()
+    .isLength({ max: 100 })
+    .withMessage('Title cannot be more than 100 characters long!')
     .bail()
     .custom(async (value) => {
       const result = await RecipeModel.checkRecipes(value);
@@ -96,13 +105,16 @@ const updateRequestValidatore = [
       }
       return true;
     }),
-  check('ingredient')
+  check('ingredients')
     .not()
     .isEmpty()
     .withMessage('Ingredient is required!')
     .bail()
-    .isLength({ min: 6 })
-    .withMessage('Ingredient must be at least 6 characters long!')
+    .isLength({ min: 10 })
+    .withMessage('Ingredient must be at least 10 characters long!')
+    .bail()
+    .isLength({ max: 500 })
+    .withMessage('Ingredient cannot be more than 500 characters long!')
     .bail()
     .isString()
     .withMessage("Ingredient can't be number!")

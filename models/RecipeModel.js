@@ -40,11 +40,11 @@ class RecipeModel {
       throw error;
     }
   }
-  static async createRecipes(title, ingredient, type) {
+  static async createRecipes(title, ingredients, type) {
     try {
       const [result] = await db.query(
-        'INSERT INTO recipes(title, ingredient, type) VALUES (?, ?, ?)',
-        [title, ingredient, type]
+        'INSERT INTO recipes(title, ingredients, type) VALUES (?, ?, ?)',
+        [title, ingredients, type]
       );
       return result.insertId;
     } catch (error) {
@@ -60,11 +60,11 @@ class RecipeModel {
     }
   }
 
-  static async updateRecipes(id, title, ingredient, type) {
+  static async updateRecipes(id, title, ingredients, type) {
     try {
       const [result] = await db.query(
-        'UPDATE recipes SET title=?, ingredient=?, type=? WHERE id=?',
-        [title, ingredient, type, id]
+        'UPDATE recipes SET title=?, ingredients=?, type=? WHERE id=?',
+        [title, ingredients, type, id]
       );
 
       return result.affectedRows;

@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "991e60f4-aaa8-470f-a873-186016042aa4",
+		"_postman_id": "88ac17f7-b7ad-4838-b4cb-ae1adfd5444f",
 		"name": "Recipe-cllection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "38098560"
+		"_exporter_id": "38098533"
 	},
 	"item": [
 		{
@@ -32,7 +32,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Omelette\",\r\n    \"ingredient\": \"Oeuf, beurre\",\r\n    \"type\": \"Plat\"\r\n}",
+					"raw": "{\r\n    \"title\": \"crepe\",\r\n    \"ingredients\": \"farime, Oeuf\",\r\n    \"type\": \"desert\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

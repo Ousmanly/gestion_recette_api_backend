@@ -21,8 +21,8 @@ class RecipeController {
 
   static async createRecipes(req, res, next) {
     try {
-      const { title, ingredient, type } = req.body;
-      await RecipeModel.createRecipes(title, ingredient, type);
+      const { title, ingredients, type } = req.body;
+      await RecipeModel.createRecipes(title, ingredients, type);
       res.status(200).json({"message":"Recipe is created successfuly"});
     } catch (error) {
       throw error;
@@ -42,8 +42,8 @@ class RecipeController {
   static async updateRecipes(req, res, next) {
     try {
       const { id } = req.params;
-      const { title, ingredient, type } = req.body;
-      await RecipeModel.updateRecipes(id, title, ingredient, type);
+      const { title, ingredients, type } = req.body;
+      await RecipeModel.updateRecipes(id, title, ingredients, type);
       res.status(200).json({"message":"Recipe is updated successfuly"});
     } catch (error) {
       throw error;
