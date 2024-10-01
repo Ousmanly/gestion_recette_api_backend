@@ -53,9 +53,9 @@ const addRequestValidatore = [
     .withMessage("Type can't be number")
     .bail()
     .custom(async (value) => {
-      const validTypes = ['plat', 'desert', 'entry'];
+      const validTypes = ['dish', 'desert', 'flat starter'];
       if (!validTypes.includes(value.toLowerCase())) {
-        throw new Error('Type recipe must be "plat", "desert", or "entry"!');
+        throw new Error('Type recipe must be "dish", "desert", or "flat starter"!');
       }
       return true;
     }),

@@ -37,7 +37,7 @@ CREATE TABLE `recipes` (
 
 LOCK TABLES `recipes` WRITE;
 /*!40000 ALTER TABLE `recipes` DISABLE KEYS */;
-INSERT INTO `recipes` VALUES (1,'crenpe','farime, Oeuf','desert'),(2,'Chicken Curry','Chicken, Curry powder, Coconut milk, Onion, Garlic, Ginger','plat'),(3,'Chocolate Cake','Flour, Sugar, Cocoa powder, Eggs, Butter, Baking powder','desert'),(7,'Pasta Carbonaran','Pasta, Bacon, Egg, Parmesan, Black pepper','plat');
+INSERT INTO `recipes` VALUES (1,'crenpe','farime, Oeuf','desert'),(2,'Chicken Curry','Chicken, Curry powder, Coconut milk, Onion, Garlic, Ginger','dish'),(3,'Chocolate Cake','Flour, Sugar, Cocoa powder, Eggs, Butter, Baking powder','desert'),(7,'Pasta Carbonaran','Pasta, Bacon, Egg, Parmesan, Black pepper','flat starter');
 /*!40000 ALTER TABLE `recipes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

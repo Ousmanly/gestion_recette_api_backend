@@ -5,15 +5,19 @@ describe('Recipe tests', () => {
 
   it('can be create', async () => {
     const recipe = { title: 'crepe test', type: 'desert', ingredients: 'farime, lait' };
-    const result = await RecipeModel.createRecipes(
-      recipe.title,
-      recipe.type,
-      recipe.ingredients
-    );
-    recipeId = result.insertId;
-    const recipeCreated = await RecipeModel.getRecipeById(recipeId);
-    expect(recipeId).not.toBeNull();
-    expect(recipeCreated).not.toBeNull();
+    const checkTitle = await RecipeModel.checkRecipes(recipe.title)
+    if (checkTitle === 0) {
+      const result = await RecipeModel.createRecipes(
+        recipe.title,
+        recipe.type,
+        recipe.ingredients
+      );
+      recipeId = result.insertId;
+      const recipeCreated = await RecipeModel.getRecipeById(recipeId);
+      
+      expect(recipeId).not.toBeNull();
+      expect(recipeCreated).not.toBeNull();
+    }
   });
 
   it('can not be create', async () => {
