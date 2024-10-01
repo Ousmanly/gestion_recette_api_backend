@@ -132,7 +132,7 @@ Pour démarrer l'application, exécutez la commande suivante :
 
 #### Exécuter les tests
 
-- Assurez-vous que votre base de données est en cours d'exécution et que les tables nécessaires sont configurées, vous pouvez importer le ficher gestion_recipes.sql qui se trouve à la racine de projet.
+- Assurez-vous que votre base de données est en cours d'exécution et que les tables nécessaires sont configurées, importer le ficher gestion_recipes.sql qui se trouve à la racine de projet.
 - Ensuite, lancez les tests avec la commande suivante :
 
 ```bash
